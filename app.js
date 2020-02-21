@@ -12,16 +12,25 @@ const paper_div = document.getElementById("p");
 const scissors_div =document.getElementById("s");
 
 // add event listeners for page interaction
+// create main function to handle all events together at once
+// define choice function - take value of buttons and compare against computer choice and bring back results
 
-rock_div.addEventListener('click', function() {
-  console.log("rock was clicked")
-});
-paper_div.addEventListener('click', function() {
-  console.log("paper was clicked")
-});
-scissors_div.addEventListener('click', function() {
-  console.log("scissors was clicked")
-});
+function choice(userChoice) {
+  console.log("you chose " + userChoice);
+}
+
+function game() {
+  rock_div.addEventListener('click', function() {
+    choice("r");
+  })
+  paper_div.addEventListener('click', function() {
+    choice("p");
+  })
+  scissors_div.addEventListener('click', function() {
+    choice("s");
+  })
+}
+game()
 
 console.log(userScore + " points for user");
 console.log(computerScore + " points for computer");
