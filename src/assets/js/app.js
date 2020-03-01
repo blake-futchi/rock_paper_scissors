@@ -9,14 +9,16 @@ const results_div = document.querySelector(".results");
 const options_div = document.querySelector(".options");
 const rock_div = document.getElementById("r");
 const paper_div = document.getElementById("p");
-const scissors_div =document.getElementById("s");
+const scissors_div = document.getElementById("s");
 
 // add event listeners for page interaction
 // create main function to handle all events together at once
 // define choice function - take value of buttons and compare against computer choice and bring back results
 
-function choice(userChoice) {
-  console.log("you chose " + userChoice);
+function getComputerChoice() {
+  const choices = ['r', 'p', 's'];
+  const randomNumber = Math.floor(Math.random() * 3);
+  return choices [randomNumber];
 }
 
 function game() {
