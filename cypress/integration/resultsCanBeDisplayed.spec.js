@@ -2,8 +2,6 @@ describe("Page can show results", () => {
   beforeEach('round', () => {
     cy.visit("http://localhost:3001/");
     cy.get("#r").click();
-    cy.get("#user-score").contains('0');
-    cy.get("#computer-score").contains('0');
   })
 
 

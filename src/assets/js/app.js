@@ -21,13 +21,17 @@ function getComputerChoice() {
   return choices [randomNumber];
 }
 
+function win() {
+  userScore++;
+  userScore_span.innerHTML = userScore;
+}
 function choice(userChoice) {
   const computerChoice = getComputerChoice();
   switch (userChoice + computerChoice) {
     case "rs":
     case "pr":
     case "sp":
-      window.alert("USER WINS");
+      win();
       break;
     case "rp":
     case "ps":
