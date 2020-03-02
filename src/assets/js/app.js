@@ -25,6 +25,11 @@ function win() {
   userScore++;
   userScore_span.innerHTML = userScore;
 }
+
+function lose() {
+  computerScore++;
+  computerScore_span.innerHTML = computerScore;
+}
 function choice(userChoice) {
   const computerChoice = getComputerChoice();
   switch (userChoice + computerChoice) {
@@ -36,7 +41,7 @@ function choice(userChoice) {
     case "rp":
     case "ps":
     case "sr":
-      window.alert("USER LOSES");
+      lose();
       break;
     case "rr":
     case "pp":
