@@ -1,7 +1,7 @@
 // storing reference points in DOM in variables
 
-const userScore = 0;
-const computerScore = 0;
+let userScore = 0;
+let computerScore = 0;
 const userScore_span = document.getElementById("user-score");
 const computerScore_span = document.getElementById("computer-score");
 const score_div = document.querySelector(".score");
