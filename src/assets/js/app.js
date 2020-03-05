@@ -10,6 +10,7 @@ const options_div = document.querySelector(".options");
 const rock_div = document.getElementById("r");
 const paper_div = document.getElementById("p");
 const scissors_div = document.getElementById("s");
+const master_div = document.getElementById("m");
 
 // add event listeners for page interaction
 // create main function to handle all events together at once
@@ -36,6 +37,9 @@ function choice(userChoice) {
     case "rs":
     case "pr":
     case "sp":
+    case "ms":
+    case "mr":
+    case "mp":
       win();
       break;
     case "rp":
@@ -59,6 +63,9 @@ function game() {
   })
   scissors_div.addEventListener('click', function() {
     choice("s");
+  })
+  master_div.addEventListener('click', function() {
+    choice("m");
   })
 }
 game()
