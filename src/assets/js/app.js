@@ -46,7 +46,6 @@ function choice(userChoice) {
     case "rr":
     case "pp":
     case "ss":
-      window.alert("DRAW");
       break;
   }
 }
@@ -64,16 +63,3 @@ function game() {
 }
 game()
 
-console.log(userScore + " points for user");
-console.log(computerScore + " points for computer");
-
-console.log(userScore_span);
-console.log(computerScore_span);
-
-console.log(score_div);
-console.log(results_div);
-console.log(options_div);
-
-console.log(rock_div);
-console.log(paper_div);
-console.log(scissors_div);

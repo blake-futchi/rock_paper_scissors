@@ -1,36 +1,37 @@
 describe("Page can show results", () => {
   beforeEach('round', () => {
-    cy.visit("http://localhost:3001/");
-    cy.get("#r").click();
+    cy.stubOutRandom(0)
   })
-
-
-  it('the game is a tie', () => {
-    cy.on('window:alert', (str) => {
-      expect(str).to.equal(`DRAW`)
+  describe('the game is a tie', () => {
+    beforeEach('round', () => {
+      cy.stub(Math, 'floor').returns(0)
+      cy.get("#r").click();
     })
-    cy.get('#user-score').should('contain', '0')
-    cy.get('#computer-score').should('contain', '0')
+    it('displays the score', () => {
+      cy.get('#user-score').should('contain', '0')
+      cy.get('#computer-score').should('contain', '0')
     });
-    
-
-  it('user wins round', () => {
-    cy.on('window:alert', (str) => {
-      expect(str).to.equal('USER WINS')
-    })
-    cy.get('#user-score').should('contain', '1')
-    cy.get('#computer-score').should('contain', '0')
-    })
-    ;
-
-  it('computer wins round', () => {
-    cy.on('window:alert', (str) => {
-      expect(str).to.equal('USER LOSES')
-    })
-    cy.get('#user-score').should('contain', '0')
-    cy.get('#computer-score').should('contain', '1')
-    })
-    ;
-
+  });
+  
+  describe('the user wins', () => {
+    beforeEach('round', () => {
+      cy.stub(Math, 'floor').returns(0)
+      cy.get("#p").click();
+    }) 
+    it('displays the score', () => {
+      cy.get('#user-score').should('contain', '1')
+      cy.get('#computer-score').should('contain', '0')
+    });
+  });
+  describe('the computer wins', () => {
+    beforeEach('round', () => {
+      cy.stub(Math, 'floor').returns(0)
+      cy.get("#s").click();
+    }) 
+    it('displays the score', () => {
+      cy.get('#user-score').should('contain', '0')
+      cy.get('#computer-score').should('contain', '1')
+      });
+  });
 });
 

@@ -23,3 +23,17 @@
 //
 // -- This will overwrite an existing command --
 // Cypress.Commands.overwrite("visit", (originalFn, url, options) => { ... })
+
+Cypress.Commands.add(
+  "stubOutRandom",
+  (option) => {
+    const mockMathRandom = (win, option) => {
+      cy.stub(win.Math, 'random').returns(option)
+    };
+    cy.visit("http://localhost:3001", {
+      onBeforeLoad: win => {
+        mockMathRandom(win, option);
+      }
+    });
+  }
+);
