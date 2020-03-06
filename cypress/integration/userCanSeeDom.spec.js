@@ -9,7 +9,7 @@ describe("User can open game", () => {
     cy.get("#computer").should('contain', 'Computer');
     cy.get("#user-score").contains('0');
     cy.get("#computer-score").contains('0');
-    cy.get("#message").should('contain', 'Make your move. Choose wisely');
+    cy.get("#message").should('contain', 'It\'s time to duel!!!!');
   })
 
   it("user can see rock paper scissors elements and click on them", () => {
