@@ -16,6 +16,7 @@ describe("User can open game", () => {
     cy.get("#r").click();
     cy.get("#p").click();
     cy.get("#s").click();
+    cy.get("#m").click();
   })
 });
 
