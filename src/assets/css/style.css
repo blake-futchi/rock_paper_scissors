@@ -53,3 +53,7 @@ button:hover {
   75% { color: aqua}
   100% { color: red; }
 }
+
+#results {
+  margin-top: 5rem;
+}
