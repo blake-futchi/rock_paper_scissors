@@ -6,6 +6,7 @@ const rock_div = document.getElementById("r");
 const paper_div = document.getElementById("p");
 const scissors_div = document.getElementById("s");
 const master_div = document.getElementById("m");
+let results = document.getElementById("results");
 
 function getComputerChoice() {
   const choices = ['r', 'p', 's'];
@@ -21,6 +22,10 @@ function win() {
 function lose() {
   computerScore++;
   computerScore_span.innerHTML = computerScore;
+}
+
+function draw() {
+
 }
 function choice(userChoice) {
   const computerChoice = getComputerChoice();
@@ -41,6 +46,7 @@ function choice(userChoice) {
     case "rr":
     case "pp":
     case "ss":
+      draw();
       break;
   }
 }
