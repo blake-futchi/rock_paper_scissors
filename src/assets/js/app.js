@@ -17,15 +17,17 @@ function getComputerChoice() {
 function win() {
   userScore++;
   userScore_span.innerHTML = userScore;
+  document.getElementById("results").innerHTML = 'User wins';
 }
 
 function lose() {
   computerScore++;
   computerScore_span.innerHTML = computerScore;
+  document.getElementById("results").innerHTML = 'User loses';
 }
 
 function draw() {
-  document.getElementById("results").innerHTML = 'You both chose the same thing...';
+  document.getElementById("results").innerHTML = 'The game is a draw';
 }
 function choice(userChoice) {
   const computerChoice = getComputerChoice();
