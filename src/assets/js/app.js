@@ -17,17 +17,21 @@ function getComputerChoice() {
 function win() {
   userScore++;
   userScore_span.innerHTML = userScore;
-  document.getElementById("results").innerHTML = 'User wins';
+  computerChoice = getComputerChoice();
+  document.getElementById("results").innerHTML = `Computer chose ${computerChoice}. You win!`;
 }
 
 function lose() {
   computerScore++;
   computerScore_span.innerHTML = computerScore;
-  document.getElementById("results").innerHTML = 'User loses';
+  computerChoice = getComputerChoice();
+  document.getElementById("results").innerHTML = `Computer chose ${computerChoice}. You lose.`;
 }
 
 function draw() {
-  document.getElementById("results").innerHTML = 'The game is a draw';
+  computerChoice = getComputerChoice();
+  document.getElementById("results").innerHTML = `Computer chose ${computerChoice}. The game is a draw`;
+  console.log(draw)
 }
 function choice(userChoice) {
   const computerChoice = getComputerChoice();
