@@ -1,0 +1,55 @@
+body {
+  text-align: center;
+  font-family: Lato;
+  font-size: larger;
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  background-image: url(/img/background.jpg);
+  color: white;
+}
+
+span {
+  margin: 0 2rem 0 2rem;
+}
+
+h1 {
+  font-weight: bold;
+}
+
+button {
+  background-color: white;
+  color: black;
+  border: 2px solid #01024B;
+  border-radius: 8px;
+  margin: 2rem 0 2rem 0; 
+  font-size: 20px;
+}
+
+button:hover { 
+  transform: translateY(.3rem); 
+  color: #da3e44;
+  -webkit-transition: all 1s ease-in-out;
+  -moz-transition: all 1s ease-in-out;
+  -o-transition: all 1s ease-in-out;
+  transition: all 1s ease-in-out;
+}
+
+
+#message {
+  -webkit-animation: color-change 2s infinite;
+    -moz-animation: color-change 2s infinite;
+    -o-animation: color-change 2s infinite;
+    -ms-animation: color-change 2s infinite;
+    animation: color-change 2s infinite;
+    font-size: 30px;
+}
+
+@-webkit-keyframes color-change {
+  0% { color: red; }
+  25% { color: whitesmoke; }
+  50% { color: violet}
+  75% { color: aqua}
+  100% { color: red; }
+}

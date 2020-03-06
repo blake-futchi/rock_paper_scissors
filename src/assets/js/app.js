@@ -1,20 +1,11 @@
-// storing reference points in DOM in variables
-
 let userScore = 0;
 let computerScore = 0;
 const userScore_span = document.getElementById("user-score");
 const computerScore_span = document.getElementById("computer-score");
-const score_div = document.querySelector(".score");
-const results_div = document.querySelector(".results");
-const options_div = document.querySelector(".options");
 const rock_div = document.getElementById("r");
 const paper_div = document.getElementById("p");
 const scissors_div = document.getElementById("s");
 const master_div = document.getElementById("m");
-
-// add event listeners for page interaction
-// create main function to handle all events together at once
-// define choice function - take value of buttons and compare against computer choice and bring back results
 
 function getComputerChoice() {
   const choices = ['r', 'p', 's'];
