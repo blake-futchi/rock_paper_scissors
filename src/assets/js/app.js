@@ -25,7 +25,7 @@ function lose() {
 }
 
 function draw() {
-
+  document.getElementById("results").innerHTML = 'You both chose the same thing...';
 }
 function choice(userChoice) {
   const computerChoice = getComputerChoice();
